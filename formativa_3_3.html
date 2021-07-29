@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+
+    <meta name="author" content="Benjamín Valdés">
+
+    <title>Formativa 3.3 - Árbol Desplegado: Implementando un Splay Tree </title>
+</head>
+
+<body>
+    <header>
+        <div class="navbar-fixed">
+            <nav>
+                <div class="blue darken-1 nav-wrapper">
+                    <a href="index.html" class="brand-logo"><acronym title="Pensamiento Computacional para Ingeniería">
+                            Programación de estructuras de datos y algoritmos fundamentales</acronym></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="container">
+            <div class="section">
+                <h3>Formativa 3.3 - Árbol Desplegado: Implementando un Splay Tree </h3>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="section" id="instrucciones">
+                <h5>
+                  <i class="small material-icons">list</i>
+                  Instrucciones</h5>
+                  <p>Descarga del respositorio de <a href ="https://github.com/benjaminva/TC1031_Estructuras_Formativas"> actividades formativas </a>
+                    el archivo main con los casos prueba correspondientes a esta actividad.
+                    Escribe tu programa como un .h para que puedas correr las pruebas automatizadas.
+                    Tu trabajo se califica con un archivo similar al main pero con diferentes valores de prueba,
+                    si tu programa no es compatible con el main, no tendrás la ponderación correspondiente.</p>
+                  <p>Ecribe un programa en C++ donde implementes un Splay Tree, sigue la aproxición vista en clase.</p>
+                  <p>Agrega el método toString que viene en comentarios en el main a tu archivo.h para que no
+                    pierdas tiempo en escribir el formato a texto. </p>
+
+                  <ul class="collection">
+                    <li class="collection-item">
+                      <p><b>add</b></p>
+                      <p><b>Descripción:</b> Agregue un dato al Splay Tree. </p>
+                      <p><b>Entrada:</b> Un entero, el cual se desea agregar al Splay Tree. </p>
+                      <p><b>Salida:</b>	Nada.</p>
+                      <p><b>Precondición:</b> n es un entero. </p>
+                      <p><b>Postcondición:</b> El Splay Tree contiene un nuevo dato y se balancea siguiedo las reglas de splay. </p>
+					          </li>
+                    <li class="collection-item">
+                      <p><b>remove</b></p>
+                      <p><b>Descripción:</b> Elimina el dato del Splay Tree. </p>
+                      <p><b>Entrada:</b> El dato  (valor del nodo) entero que se desea borrar. </p>
+                      <p><b>Salida:</b>	Nada. </p>
+                      <p><b>Precondición:</b> El splay Tree tenga al menos un dato. </p>
+                      <p><b>Postcondición:</b> El Splay Tree queda sin el dato de entrada en caso de que este exista y se balancea siguiedo las reglas de splay. </p>
+					          </li>
+                    <li class="collection-item">
+                      <p><b>find</b></p>
+                      <p><b>Descripción:</b> Regresa un valor boleano que representa si el dato qus se desea encontrar existe o no.</p>
+                      <p><b>Entrada:</b> El dato entero que se busca. </p>
+                      <p><b>Salida:</b>	Un valor boleando que representa true si el dato qus se desea encontrar existe y false si no.</p>
+                      <p><b>Precondición:</b> Nada. </p>
+                      <p><b>Postcondición:</b> El Splay Tree modificado después de la búsqueda siguiedo las reglas de splay. </p>
+					          </li>
+                    <li class="collection-item">
+                      <p><b>size</b></p>
+                      <p><b>Descripción:</b> Regresa la cantidad de datos que tiene el Splay Tree.</p>
+                      <p><b>Entrada:</b> Nada. </p>
+                      <p><b>Salida:</b>	Un valor entero que represena la cantidad de datos el Splay Tree.</p>
+                      <p><b>Precondición:</b> Nada. </p>
+                      <p><b>Postcondición:</b> Nada. </p>
+					          </li>
+                </ul>
+            </div>
+            <div class="divider"></div>
+
+            <div class="section" id="recursos">
+                <h5><i class="small material-icons">attachment</i>Recursos</h5>
+                <ul class="collection">
+				            <li class="collection-item">
+                      Usa como ejemplo el repositorio de <a href ="https://github.com/benjaminva/TC1031_Estructuras_Formativas"> actividades formativas </a>
+                </ul>
+            </div>
+            <div class="divider"></div>
+
+            <div class="section" id="entrega">
+                <h5>
+              <i class="small material-icons">offline_pin</i>
+              Especificaciones de entrega
+            </h5>
+            <ul class="collection">
+                <li class="collection-item">
+                Sube tu archivo .h a tu repositorio de github de actividades formativas y escribe tu análisis de complejidad en el readme de esa carpeta.
+                Entrega el link en canvas en la actividad formativa correspondiente antes de la siguiente sesión.
+            </ul>
+            </div>
+            <div class="divider"></div>
+
+        </div>
+    </main>
+
+    <footer class="blue darken-1 page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h5 class="white-text">Secciones</h5>
+                    <ol class="grey-text text-lighten-3">
+                        <li><a class="grey-text text-lighten-3" href="#instrucciones">Instrucciones</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#recursos">Recursos</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#entrega">Especificaciones de entrega</a></li>
+                    </ol>
+                </div>
+            </div>
+            <p class="grey-text text-lighten-4">Powered by <a href="http://materializecss.com/" target="_blank" class="white-text text-lighten-4">Materialize</a>.</p>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+               © 2021 Escuela de Ingeniería y Ciencias - Tecnológico de Monterrey.
+            </div>
+        </div>
+    </footer>
+
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+</body>
+
+</html>
