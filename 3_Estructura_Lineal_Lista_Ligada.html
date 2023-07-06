@@ -14,7 +14,7 @@
 
     <meta name="author" content="Benjamín Valdés">
 
-    <title>Formativa 1.2 - Algoritmos de Búsqueda y Ordenamiento</title>
+    <title>3 Lista ligada simple</title>
 </head>
 
 <body>
@@ -33,7 +33,7 @@
 
         <div class="container">
             <div class="section">
-                <h3>Formativa 1.2 - Algoritmos de Búsqueda y Ordenamiento</h3>
+                <h3>3 Lista ligada simple</h3>
             </div>
         </div>
 
@@ -42,53 +42,47 @@
                 <h5>
                   <i class="small material-icons">list</i>
                   Instrucciones</h5>
-                  <p>Descarga del respositorio de <a href ="https://github.com/benjaminva/TC1031_Estructuras_Formativas"> actividades formativas </a>
+                  <p>Descarga del respositorio de <a href ="https://github.com/benjaminva/TC1031-Estructuras-Formativas"> actividades formativas </a>
                     el archivo main con los casos prueba correspondientes a esta actividad.
                     Escribe tu programa como un .h para que puedas correr las pruebas automatizadas.
                     Tu trabajo se califica con un archivo similar al main pero con diferentes valores de prueba,
                     si tu programa no es compatible con el main, no tendrás la ponderación correspondiente.</p>
-                  <p>Ecribe un programa en C++ que dado un vector<int> tamaño n, donde recibe n números desde el main,
-                    tenga las siguientes funciones de ordenamiento: </p>
+                  <p>Ecribe un programa en C++ siguiendo la especificación de la interfaz para un ADT que
+                     represente una estructura de datos lineal (Linked List). </p>
+                  <p>Para entender las descripcciones sigue o investiga el ADT de una lista ligada, agrega el método
+                     toString que viene en comentarios en el main a tu archivo.h para que no pierdas tiempo en escribir el formato a texto. </p>
                 <ul class="collection">
                     <li class="collection-item">
-                      <p><b>ordenaSeleccion</b></p>
-                      <p><b>Descripción:</b>Ordene en forma ascendente los datos con el método de Selccion</p>
-                      <p><b>Entrada:</b>	Un vector<int> con los n numeros </p>
+                      <p><b>insertion</b></p>
+                      <p><b>Descripción:</b> Insertar un elemento en la estructura de datos (create) de acuerdo a la política de acceso de la estructura</p>
+                      <p><b>Entrada:</b>	Estructura de datos y elemento a insertar </p>
                       <p><b>Salida:</b>	Nada</p>
-                      <p><b>Precondición:</b>	El vector<int> debe contener los n números </p>
-                      <p><b>Postcondición:</b> El vector<int> contendrá los datos ya ordenados</p>
+                      <p><b>Precondición:</b>	Una estructura válida  </p>
+                      <p><b>Postcondición:</b> Estructura modificada </p>
 					          </li>
                     <li class="collection-item">
-                      <p><b>ordenaBurbuja</b></p>
-                      <p><b>Descripción:</b>Ordene en forma ascendentelos datos con el método de Burbuja</p>
-                      <p><b>Entrada:</b>	Un vector<int> con los n numeros </p>
-                      <p><b>Salida:</b>	Nada</p>
-                      <p><b>Precondición:</b>	El vector<int> debe contener los n números </p>
-                      <p><b>Postcondición:</b> El vector<int> contendrá los datos ya ordenados</p>
+                      <p><b>search</b></p>
+                      <p><b>Descripción:</b>Encuentra el elemento en la estructura y devuelve su posición. </p>
+                      <p><b>Entrada:</b>	El elemento a buscar (un entero) </p>
+                      <p><b>Salida:</b> La posición del elemento a buscar o -1 ( si no existe un elemento con esas características)</p>
+                      <p><b>Precondición:</b>	Estructura de datos válida </p>
+                      <p><b>Postcondición:</b> Estructura de datos válida </p>
 					          </li>
                     <li class="collection-item">
-                      <p><b>ordenaMerge</b></p>
-                      <p><b>Descripción:</b>Ordene en forma ascendente los datos con el método de Merge</p>
-                      <p><b>Entrada:</b>	Un vector<int> con los n numeros </p>
+                      <p><b>update</b></p>
+                      <p><b>Descripción:</b>Actualizar  un elemento dentro de la estructura de datos (update) de acuerdo a la estructura de datos específica </p>
+                      <p><b>Entrada:</b>	posición del elemento a actualizar, valor nuevo.</p>
                       <p><b>Salida:</b>	Nada</p>
-                      <p><b>Precondición:</b>	El vector<int> debe contener los n números </p>
-                      <p><b>Postcondición:</b> El vector<int> contendrá los datos ya ordenados</p>
-					          </li>
-                    <li class="collection-item">
-                      <p><b>busqSecuencial</b></p>
-                      <p><b>Descripción:</b>Buscar con la busqueda secuencial un dato entero dentro del vector.</p>
-                      <p><b>Entrada:</b> El vector <int> del espacio de búsqueda y el dato entero que se desea buscar. </p>
-                      <p><b>Salida:</b>	El índice donde se encuentra el dato o -1 en caso de que no se localice.</p>
-                      <p><b>Precondición:</b>	El vector<int> debe contener los n números </p>
-                      <p><b>Postcondición:</b> Ninguna </p>
+                      <p><b>Precondición:</b>	Estructura de datos válida </p>
+                      <p><b>Postcondición:</b> Estructura de datos válida con el cambio </p>
                     </li>
                     <li class="collection-item">
-                      <p><b>busqBinaria</b></p>
-                      <p><b>Descripción:</b>Buscar con la busqueda binaria un dato entero dentro del vector.</p>
-                      <p><b>Entrada:</b> El vector <int> del espacio de búsqueda y el dato entero que se desea buscar. </p>
-                      <p><b>Salida:</b>	El índice donde se encuentra el dato o -1 en caso de que no se localice.</p>
-                      <p><b>Precondición:</b>	El vector<int> debe contener los n números ordenados en forma ascenedente </p>
-                      <p><b>Postcondición:</b> Ninguna </p>
+                      <p><b>deleteAt</b></p>
+                      <p><b>Descripción:</b> Borrar (eliminar) un elemento dentro de la estructura de datos segun su posición.</p>
+                      <p><b>Entrada:</b> La posición del elemento a eliminar. </p>
+                      <p><b>Salida:</b>	El valor del elemento eliminado. </p>
+                      <p><b>Precondición:</b>	Estructura de datos válida </p>
+                      <p><b>Postcondición:</b> Estructura de datos válida con el cambio </p>
                     </li>
                 </ul>
             </div>
@@ -98,8 +92,8 @@
                 <h5><i class="small material-icons">attachment</i>Recursos</h5>
                 <ul class="collection">
 				            <li class="collection-item">
-                      Usa como ejemplo el repositorio de <a href ="https://github.com/benjaminva/TC1031_Estructuras_Formativas"> actividades formativas </a>
-              </ul>
+                      Usa como ejemplo el repositorio de <a href ="https://github.com/benjaminva/TC1031-Estructuras-Formativas"> actividades formativas </a>
+                </ul>
             </div>
             <div class="divider"></div>
 
@@ -110,8 +104,8 @@
             </h5>
             <ul class="collection">
                 <li class="collection-item">
-                Sube tu archivo .h a tu repositorio de github de actividades formativas y escribe tu análisis de complejidad en el readme de esa carpeta.
-                Entrega el link en canvas en la actividad formativa correspondiente antes de la siguiente sesión.
+                Prueba tu archivo .h con el main de tu repositorio de github de la actividad correspondiente.
+                Una vez que estes listo y pases todas las pruebas entrega el .h en la actividad correspondiente de canvas antes de la siguiente sesión.
             </ul>
             </div>
             <div class="divider"></div>

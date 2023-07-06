@@ -14,7 +14,7 @@
 
     <meta name="author" content="Benjamín Valdés">
 
-    <title>Formativa 3.1 - Operaciones avanzadas en un BST </title>
+    <title>1 Funciones Iterativas Recursivas</title>
 </head>
 
 <body>
@@ -33,7 +33,7 @@
 
         <div class="container">
             <div class="section">
-                <h3>Formativa 3.1 - Operaciones avanzadas en un BST </h3>
+                <h3>1 Funciones Iterativas Recursivas</h3>
             </div>
         </div>
 
@@ -42,56 +42,37 @@
                 <h5>
                   <i class="small material-icons">list</i>
                   Instrucciones</h5>
-                  <p>Descarga del respositorio de <a href ="https://github.com/benjaminva/TC1031_Estructuras_Formativas"> actividades formativas </a>
+                  <p>Descarga del respositorio de <a href ="https://github.com/benjaminva/TC1031-Estructuras-Formativas"> actividades formativas </a>
                     el archivo main con los casos prueba correspondientes a esta actividad.
                     Escribe tu programa como un .h para que puedas correr las pruebas automatizadas.
                     Tu trabajo se califica con un archivo similar al main pero con diferentes valores de prueba,
                     si tu programa no es compatible con el main, no tendrás la ponderación correspondiente.</p>
-                  <p>Ecribe un programa en C++ siguiendo la especificación de la interfaz para un ADT de BST
-                    agrega las funcionalidades avanzadas al ADT del BST realizado con las funcionalidades fundamentales</p>
+                  <p>Realiza un programa que calculé la sumatora de 1 hasta n y llame a tres funciones: </p>
                 <ul class="collection">
                     <li class="collection-item">
-                      <p><b>visit</b></p>
-                      <p><b>Descripción:</b>
-                         Despliega cada uno de los datos almacenados en el BST: </br>
-                        1. Preorder</br>
-                        2. Inorder</br>
-                        3. Postorder</br>
-                        4. Level by level</br>
-                        "[11 8 12 110 17 112]\n[8 11 12 17 110 112]\n[8 17 112 110 12 11]\n[11 8 12 110 17 112]"
-                      </p>
-                      <p><b>Entrada:</b> Nada </p>
-                      <p><b>Salida:</b>	String con los 4 recorridos,
-                        seperados por un salto de línea \n entre cada uno (ver ejemplo en el main)  </p>
-                      <p><b>Precondición:</b> Un BST válido </p>
-                      <p><b>Postcondición:</b> No se modica la estructura </p>
+                      <p><b>sumaIterativa</b></p>
+                      <p><b>Descripción:</b>	Calcule la sumatoria de 1 hasta n con un metodo iterativo.</p>
+                      <p><b>Entrada:</b>	Un entero positivo (n)</p>
+                      <p><b>Salida:</b>	La sumatoria de 1 hasta n</p>
+                      <p><b>Precondición:</b>	n es un entero positivo</p>
+                      <p><b>Postcondición:	</b>Nada</p>
 					          </li>
                     <li class="collection-item">
-                      <p><b>height</b></p>
-                      <p><b>Descripción:</b> Obtiene la altura del BST (el número del nivel más profundo). Un árbol con solo la raíz tiene altura 1 </p>
-                      <p><b>Entrada:</b> Nada </p>
-                      <p><b>Salida:</b> Un entero con el cual indicará la altura del BST </p>
-                      <p><b>Precondición:</b>	Un BST válido </p>
-                      <p><b>Postcondición:</b> No se modica la estructura </p>
+                      <p><b>sumaRecursiva</b></p>
+                      <p><b>Descripción:</b>	Calcule la sumatoria de 1 hasta n con un metodo recursivo.</p>
+                      <p><b>Entrada:</b>	Un entero positivo (n)</p>
+                      <p><b>Salida:</b> La sumatoria de 1 hasta n</p>
+                      <p><b>Precondición:</b>	n es un entero positivo</p>
+                      <p><b>Postcondición:</b>	Nada</p>
 					          </li>
                     <li class="collection-item">
-                      <p><b>ancestors</b></p>
-                      <p><b>Descripción:</b> Obtiene los ancestros de un dato (todos los nodos
-                        arribas de n  en línea directa hasta llegar a la raiz) </br>
-                      "[10 12 110]"</p>
-                      <p><b>Entrada:</b> El dato (valor del nodo) del cual se desea conocer los ancestros</p>
-                      <p><b>Salida:</b>	Un string con los valores de los nodos ancentros </p>
-                      <p><b>Precondición:</b> Un BST válido </p>
-                      <p><b>Postcondición:</b> No se modica la estructura </p>
-                    </li>
-                    <li class="collection-item">
-                      <p><b>whatlevelamI</b></p>
-                      <p><b>Descripción:</b> Obtiene el valor del nivel del nodo actual</p>
-                      <p><b>Entrada:</b> El dato (valor del nodo) del cual se desea conocer su nivel</p>
-                      <p><b>Salida:</b>	El entero con el valor de nivel</p>
-                      <p><b>Precondición:</b>		Un BST válido </p>
-                      <p><b>Postcondición:</b> No se modica la estructura </p>
-                    </li>
+                      <p><b>sumaDirecta</b></p>
+                      <p><b>Descripción:</b>	Calcule la sumatoria de 1 hasta n con un metodo matemático directo (sin ciclos, ni recursión).</p>
+                      <p><b>Entrada:</b>	Un entero positivo (n)</p>
+                      <p><b>Salida:</b>	La sumatoria de 1 hasta n</p>
+                      <p><b>Precondición:</b>	n es un entero positivo</p>
+                      <p><b>Postcondición:</b>	Nada</p>
+					          </li>
                 </ul>
             </div>
             <div class="divider"></div>
@@ -100,7 +81,7 @@
                 <h5><i class="small material-icons">attachment</i>Recursos</h5>
                 <ul class="collection">
 				            <li class="collection-item">
-                      Usa como ejemplo el repositorio de <a href ="https://github.com/benjaminva/TC1031_Estructuras_Formativas"> actividades formativas </a>
+                    Usa como ejemplo el repositorio de <a href ="https://github.com/benjaminva/TC1031-Estructuras-Formativas"> actividades formativas </a>
                 </ul>
             </div>
             <div class="divider"></div>
@@ -112,8 +93,8 @@
             </h5>
             <ul class="collection">
                 <li class="collection-item">
-                Sube tu archivo .h a tu repositorio de github de actividades formativas y escribe tu análisis de complejidad en el readme de esa carpeta.
-                Entrega el link en canvas en la actividad formativa correspondiente antes de la siguiente sesión.
+                Prueba tu archivo .h con el main de tu repositorio de github de la actividad correspondiente.
+                Una vez que estes listo y pases todas las pruebas entrega el .h en la actividad correspondiente de canvas antes de la siguiente sesión.
             </ul>
             </div>
             <div class="divider"></div>

@@ -14,7 +14,7 @@
 
     <meta name="author" content="Benjamín Valdés">
 
-    <title>Formativa 3.2 - Árbol Heap: Implementando una fila priorizada </title>
+    <title>4 Lista doblemente encadenada</title>
 </head>
 
 <body>
@@ -33,7 +33,7 @@
 
         <div class="container">
             <div class="section">
-                <h3>Formativa 3.2 - Árbol Heap: Implementando una fila priorizada </h3>
+                <h3>4 Lista doblemente encadenada </h3>
             </div>
         </div>
 
@@ -42,57 +42,49 @@
                 <h5>
                   <i class="small material-icons">list</i>
                   Instrucciones</h5>
-                  <p>Descarga del respositorio de <a href ="https://github.com/benjaminva/TC1031_Estructuras_Formativas"> actividades formativas </a>
+                  <p>Descarga del respositorio de <a href ="https://github.com/benjaminva/TC1031-Estructuras-Formativas"> actividades formativas </a>
                     el archivo main con los casos prueba correspondientes a esta actividad.
                     Escribe tu programa como un .h para que puedas correr las pruebas automatizadas.
                     Tu trabajo se califica con un archivo similar al main pero con diferentes valores de prueba,
                     si tu programa no es compatible con el main, no tendrás la ponderación correspondiente.</p>
-                  <p>Ecribe un programa en C++ siguiendo la especificación de la interfaz para un ADT de un heap
-                    y simulando una fila priorizada de enteros con prioridad de valor mayor.</p>
-                  <p> Agrega el método toString que viene en comentarios en el main a tu archivo.h para que no
-                    pierdas tiempo en escribir el formato a texto. </p>
-
-                  <ul class="collection">
+                  <p>Ecribe un programa en C++ siguiendo la especificación de la interfaz para un ADT que
+                     represente una estructura de datos lineal (Double Linked List). </p>
+                  <p>Para entender las descripcciones sigue o investiga el ADT de una lista doblemente ligada, agrega el método
+                     to_string que viene en comentarios en el main a tu archivo.h
+                    para que no pierdas tiempo en escribir el formato a texto. </p>
+                <ul class="collection">
                     <li class="collection-item">
-                      <p><b>push</b></p>
-                      <p><b>Descripción:</b> Agregue un dato a la fila priorizada. </p>
-                      <p><b>Entrada:</b> El dato n tipo entero (int) que se desea agregar a la fila priorizada. </p>
-                      <p><b>Salida:</b>	Nada.</p>
-                      <p><b>Precondición:</b> n es un entero. </p>
-                      <p><b>Postcondición:</b> La fila priorizada contiene un nuevo dato. </p>
+                      <p><b>insertion</b></p>
+                      <p><b>Descripción:</b> Insertar un elemento en la estructura de datos (create) de acuerdo a la política de acceso de la estructura</p>
+                      <p><b>Entrada:</b>	Estructura de datos y elemento a insertar </p>
+                      <p><b>Salida:</b>	Nada</p>
+                      <p><b>Precondición:</b>	Una estructura válida  </p>
+                      <p><b>Postcondición:</b> Estructura modificada </p>
 					          </li>
                     <li class="collection-item">
-                      <p><b>pop</b></p>
-                      <p><b>Descripción:</b> Saca de la fila priorizada el dato que tiene mayor prioridad. </p>
-                      <p><b>Entrada:</b> Nada. </p>
-                      <p><b>Salida:</b>	Nada. </p>
-                      <p><b>Precondición:</b> Que la fila priorizada contenga al menos 1 dato. </p>
-                      <p><b>Postcondición:</b> La fila priorizada queda sin el dato con mayor prioridad. </p>
+                      <p><b>search</b></p>
+                      <p><b>Descripción:</b>Encuentra el elemento en la estructura y devuelve su posición. </p>
+                      <p><b>Entrada:</b>	El elemento a buscar (un entero) </p>
+                      <p><b>Salida:</b> La posición del elemento a buscar o -1 ( si no existe un elemento con esas características)</p>
+                      <p><b>Precondición:</b>	Estructura de datos válida </p>
+                      <p><b>Postcondición:</b> Estructura de datos válida </p>
 					          </li>
                     <li class="collection-item">
-                      <p><b>top</b></p>
-                      <p><b>Descripción:</b> Regresa el valor del dato que esta con mayor prioridad en la fila priorizada.</p>
-                      <p><b>Entrada:</b> Nada. </p>
-                      <p><b>Salida:</b>	El dato que tiene mayor prioridad dentro de la Fila priorizada.</p>
-                      <p><b>Precondición:</b> Que la fila priorizada contenga al menos 1 dato. </p>
-                      <p><b>Postcondición:</b> La estructura no se modifica. </p>
-					          </li>
+                      <p><b>update</b></p>
+                      <p><b>Descripción:</b>Actualizar  un elemento dentro de la estructura de datos (update) de acuerdo a la estructura de datos específica </p>
+                      <p><b>Entrada:</b>	posición del elemento a actualizar, valor nuevo.</p>
+                      <p><b>Salida:</b>	Nada</p>
+                      <p><b>Precondición:</b>	Estructura de datos válida </p>
+                      <p><b>Postcondición:</b> Estructura de datos válida con el cambio </p>
+                    </li>
                     <li class="collection-item">
-                      <p><b>empty</b></p>
-                      <p><b>Descripción:</b> Regresa un valor boleando diciendo si la fila priorizada esta vacía o tiene datos. </p>
-                      <p><b>Entrada:</b> Nada. </p>
-                      <p><b>Salida:</b>	Un valor boleano que sea verdadero si la fila priorizada esta vacía o flase si tiene datos.</p>
-                      <p><b>Precondición:</b> Nada. </p>
-                      <p><b>Postcondición:</b> La estructura no se modifica. </p>
-					          </li>
-                    <li class="collection-item">
-                      <p><b>size</b></p>
-                      <p><b>Descripción:</b> Regresa la cantidad de datos que tiene la fila priorizada.</p>
-                      <p><b>Entrada:</b> Nada. </p>
-                      <p><b>Salida:</b>	Un valor entero con la cantidad de datos en la fila priorizada.</p>
-                      <p><b>Precondición:</b> Nada. </p>
-                      <p><b>Postcondición:</b> La estructura no se modifica. </p>
-					          </li>
+                      <p><b>deleteAt</b></p>
+                      <p><b>Descripción:</b> Borrar (eliminar) un elemento dentro de la estructura de datos segun su posición.</p>
+                      <p><b>Entrada:</b> La posición del elemento a eliminar. </p>
+                      <p><b>Salida:</b>	El valor del elemento eliminado. </p>
+                      <p><b>Precondición:</b>	Estructura de datos válida </p>
+                      <p><b>Postcondición:</b> Estructura de datos válida con el cambio </p>
+                    </li>
                 </ul>
             </div>
             <div class="divider"></div>
@@ -101,7 +93,7 @@
                 <h5><i class="small material-icons">attachment</i>Recursos</h5>
                 <ul class="collection">
 				            <li class="collection-item">
-                      Usa como ejemplo el repositorio de <a href ="https://github.com/benjaminva/TC1031_Estructuras_Formativas"> actividades formativas </a>
+                      Usa como ejemplo el repositorio de <a href ="https://github.com/benjaminva/TC1031-Estructuras-Formativas"> actividades formativas </a>
                 </ul>
             </div>
             <div class="divider"></div>
@@ -113,8 +105,8 @@
             </h5>
             <ul class="collection">
                 <li class="collection-item">
-                Sube tu archivo .h a tu repositorio de github de actividades formativas y escribe tu análisis de complejidad en el readme de esa carpeta.
-                Entrega el link en canvas en la actividad formativa correspondiente antes de la siguiente sesión.
+                Prueba tu archivo .h con el main de tu repositorio de github de la actividad correspondiente.
+                Una vez que estes listo y pases todas las pruebas entrega el .h en la actividad correspondiente de canvas antes de la siguiente sesión.
             </ul>
             </div>
             <div class="divider"></div>

@@ -14,7 +14,7 @@
 
     <meta name="author" content="Benjamín Valdés">
 
-    <title>Formativa 2.2 - Implementación de una lista doblemente encadenada</title>
+    <title>8 Grafo con busqueda</title>
 </head>
 
 <body>
@@ -33,7 +33,7 @@
 
         <div class="container">
             <div class="section">
-                <h3>Formativa 2.2 - Implementación de una lista doblemente encadenada </h3>
+                <h3>8 Grafo con busqueda </h3>
             </div>
         </div>
 
@@ -42,48 +42,45 @@
                 <h5>
                   <i class="small material-icons">list</i>
                   Instrucciones</h5>
-                  <p>Descarga del respositorio de <a href ="https://github.com/benjaminva/TC1031_Estructuras_Formativas"> actividades formativas </a>
+                  <p>Descarga del respositorio de <a href ="https://github.com/benjaminva/TC1031-Estructuras-Formativas"> actividades formativas </a>
                     el archivo main con los casos prueba correspondientes a esta actividad.
                     Escribe tu programa como un .h para que puedas correr las pruebas automatizadas.
                     Tu trabajo se califica con un archivo similar al main pero con diferentes valores de prueba,
                     si tu programa no es compatible con el main, no tendrás la ponderación correspondiente.</p>
-                  <p>Ecribe un programa en C++ siguiendo la especificación de la interfaz para un ADT que
-                     represente una estructura de datos lineal (Double Linked List). </p>
-                  <p>Para entender las descripcciones sigue o investiga el ADT de una lista doblemente ligada, agrega el método
-                     to_string que viene en comentarios en el main a tu archivo.h
-                    para que no pierdas tiempo en escribir el formato a texto. </p>
-                <ul class="collection">
+                  <p>Ecribe un programa en C++ donde implementes un Grafo y sus búsquedas, sigue la aproxición vista en clase.</p>
+                  <p>Usa como base el archivo graph.h que viene en la misma carperta del main para que puedas ser compatible
+                  con los modos de lectura de archivo. También consulat los archivos star.txt y g.txt para ver grafos en archivos
+                  de texto </p>
+
+                  <ul class="collection">
                     <li class="collection-item">
-                      <p><b>insertion</b></p>
-                      <p><b>Descripción:</b> Insertar un elemento en la estructura de datos (create) de acuerdo a la política de acceso de la estructura</p>
-                      <p><b>Entrada:</b>	Estructura de datos y elemento a insertar </p>
-                      <p><b>Salida:</b>	Nada</p>
-                      <p><b>Precondición:</b>	Una estructura válida  </p>
-                      <p><b>Postcondición:</b> Estructura modificada </p>
+                      <p><b>loadGraphList</b></p>
+                      <p><b>Descripción:</b> Cargue los arcos del grafo y los almacene en una lista de adjacencia.
+                      Puedes basarte en la funcion loadGraphMat que viene en la carpeta para ver como leer de un archivo.</p>
+                      <p><b>Entrada:</b> Dos enteros positivos:</br>
+                         n (Cantidad de Vertices) </br>
+                         m (Cantidad de Arcos)</br>
+                        y un string con el nombre del archivo de texto con la lista de arcos del
+                        grafo en el formato que viene en el archivo "star.h" que viene en la carpeta del main </p>
+                      <p><b>Salida:</b>	Nada.</p>
+                      <p><b>Precondición:</b> n y m son enteros positivos, el archivo debe existir.</p>
+                      <p><b>Postcondición:</b> El grafo cargado en una lista de adyacencia. </p>
 					          </li>
                     <li class="collection-item">
-                      <p><b>search</b></p>
-                      <p><b>Descripción:</b>Encuentra el elemento en la estructura y devuelve su posición. </p>
-                      <p><b>Entrada:</b>	El elemento a buscar (un entero) </p>
-                      <p><b>Salida:</b> La posición del elemento a buscar o -1 ( si no existe un elemento con esas características)</p>
-                      <p><b>Precondición:</b>	Estructura de datos válida </p>
-                      <p><b>Postcondición:</b> Estructura de datos válida </p>
-					          </li>
-                    <li class="collection-item">
-                      <p><b>update</b></p>
-                      <p><b>Descripción:</b>Actualizar  un elemento dentro de la estructura de datos (update) de acuerdo a la estructura de datos específica </p>
-                      <p><b>Entrada:</b>	posición del elemento a actualizar, valor nuevo.</p>
-                      <p><b>Salida:</b>	Nada</p>
-                      <p><b>Precondición:</b>	Estructura de datos válida </p>
-                      <p><b>Postcondición:</b> Estructura de datos válida con el cambio </p>
+                      <p><b>DFS</b></p>
+                      <p><b>Descripción:</b> Imprima el Recorrido de DFS (Profundidad) a partir de nodo inicial. </p>
+                      <p><b>Entrada:</b> nodo inicial y nodo meta. </p>
+                      <p><b>Salida:</b>	string con la lista de nodos visitado y el path.</p>
+                      <p><b>Precondición:</b> El nodo incial debe existir y el grafo debera de estar correctamente cargado.</p>
+                      <p><b>Postcondición:</b> No se modifica el grafo</p>
                     </li>
                     <li class="collection-item">
-                      <p><b>deleteAt</b></p>
-                      <p><b>Descripción:</b> Borrar (eliminar) un elemento dentro de la estructura de datos segun su posición.</p>
-                      <p><b>Entrada:</b> La posición del elemento a eliminar. </p>
-                      <p><b>Salida:</b>	El valor del elemento eliminado. </p>
-                      <p><b>Precondición:</b>	Estructura de datos válida </p>
-                      <p><b>Postcondición:</b> Estructura de datos válida con el cambio </p>
+                      <p><b>BFS</b></p>
+                      <p><b>Descripción:</b> Imprima el Recorrido de DFS (Profundidad) a partir de nodo inicial. </p>
+                      <p><b>Entrada:</b> nodo inicial y nodo meta. </p>
+                      <p><b>Salida:</b>	string con la lista de nodos visitado y el path.</p>
+                      <p><b>Precondición:</b> El nodo incial debe existir y el grafo debera de estar correctamente cargado.</p>
+                      <p><b>Postcondición:</b> No se modifica el grafo</p>
                     </li>
                 </ul>
             </div>
@@ -93,7 +90,7 @@
                 <h5><i class="small material-icons">attachment</i>Recursos</h5>
                 <ul class="collection">
 				            <li class="collection-item">
-                      Usa como ejemplo el repositorio de <a href ="https://github.com/benjaminva/TC1031_Estructuras_Formativas"> actividades formativas </a>
+                      Usa como ejemplo el repositorio de <a href ="https://github.com/benjaminva/TC1031-Estructuras-Formativas"> actividades formativas </a>
                 </ul>
             </div>
             <div class="divider"></div>
@@ -105,8 +102,8 @@
             </h5>
             <ul class="collection">
                 <li class="collection-item">
-                Sube tu archivo .h a tu repositorio de github de actividades formativas y escribe tu análisis de complejidad en el readme de esa carpeta.
-                Entrega el link en canvas en la actividad formativa correspondiente antes de la siguiente sesión.
+                Prueba tu archivo .h con el main de tu repositorio de github de la actividad correspondiente.
+                Una vez que estes listo y pases todas las pruebas entrega el .h en la actividad correspondiente de canvas antes de la siguiente sesión.
             </ul>
             </div>
             <div class="divider"></div>
